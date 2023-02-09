@@ -1,4 +1,4 @@
-const squareDigits  = require('./square');
+const squareDigits  = require('./Digits square');
 it("digit should be square", () => {
     const givenNumber = 9119;
     const expectedOutPut ="(81-1-1-81)";
