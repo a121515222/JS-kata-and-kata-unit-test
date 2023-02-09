@@ -13,23 +13,19 @@
 function squareDigits(num) {
     const digits =`${num}`;
     const digitsArray = digits.split("");
-    const squareArray =  digitsArray.map(digit => digit * digit)
-    let result = "";
-    squareArray.forEach((num,index) =>{
+    return digitsArray.map((digit,index) => {
       if(digitsArray.length === 1) 
       {
-        result += `(${num})`
+        return `(${digit * digit})`
       } else if(index === (digitsArray.length)-1) {
-        result += `-${num})`
+        return `-${digit * digit})`
       } else if(index === 0) {
-        result += `(${num}`
+        return `(${digit * digit}`
       } 
       else {
-        result +=`-${num}`
+        return`-${digit * digit}`
       }
-    });
-    return result;
+      }).join("");
   };
   module.exports = squareDigits;
-  console.log("Hello")
   console.log(squareDigits(9119)); // expect (81-1-1-81)
