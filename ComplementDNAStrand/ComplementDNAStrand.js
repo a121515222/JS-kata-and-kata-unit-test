@@ -19,11 +19,14 @@ function complementDNAStrand(dna){
             return "C";
           case "C" :
             return "G";
-          default :
+          case "" :
             throw "Input Nucleic acid sequence error";
             break;
+          // default :
+          //   throw "Input Nucleic acid sequence error";
       }
     }).join("")
   }
   module.exports = complementDNAStrand;
-  console.log(complementDNAStrand("ATgccqccaaaatatatttttc"))
+  console.log(complementDNAStrand("ATgccqccaaaatatatttttc"))//"Input Nucleic acid sequence error"
+  console.log(complementDNAStrand("ATGC"));//TACG
