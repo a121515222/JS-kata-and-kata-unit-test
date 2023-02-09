@@ -10,9 +10,6 @@
 function complementDNAStrand(dna){
     const inputDNA = dna.toUpperCase();
     return inputDNA.split("").map((nucleobase) => {
-      if (nucleobase !== "A" && nucleobase !== "T" && nucleobase !== "G" && nucleobase !== "C" && nucleobase === "") {
-        throw "Input Nucleic acid sequence error";
-      }
       switch(nucleobase) {
           case "A" :
             return "T";
@@ -22,6 +19,9 @@ function complementDNAStrand(dna){
             return "C";
           case "C" :
             return "G";
+          default :
+            throw "Input Nucleic acid sequence error";
+            break;
       }
     }).join("")
   }
