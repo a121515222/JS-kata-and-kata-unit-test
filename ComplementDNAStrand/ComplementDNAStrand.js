@@ -19,11 +19,12 @@ function complementDNAStrand(dna){
             return "C";
           case "C" :
             return "G";
-          case "" :
+          case " ":
             throw "Input Nucleic acid sequence error";
-            break;
+          // case /^ATCG/:
+          //   throw "Input Nucleic acid sequence error";  
           // default :
-          //   throw "Input Nucleic acid sequence error";
+          //   throw "Input Nucleic acid sequence error";  
       }
     }).join("")
   }
