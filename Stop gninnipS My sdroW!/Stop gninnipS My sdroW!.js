@@ -14,3 +14,4 @@ function spinWords(string){
     return word.length >= 5 ? word.split("").reverse().join("") : word
     }).join(" ");
   }
+  module.exports = spinWords;
