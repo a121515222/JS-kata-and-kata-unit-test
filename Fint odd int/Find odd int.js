@@ -12,21 +12,21 @@
 // [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 function findOdd(InputArray) {
     const keyArray = [... new Set(InputArray)];
-    const storageCountTime = {};
+    const storageCount = {};
     keyArray.forEach(key=>{
-         storageCountTime[key] = 0
+         storageCount[key] = 0
     });
     InputArray.forEach(num=>{
-          storageCountTime[num] ++;
+          storageCount[num] ++;
     })
-    console.log(storageCountTime)
-    const storageCountTimeValue = Object.values(storageCountTime);
-    const storageCountTimeKeys = Object.keys(storageCountTime);
-    return storageCountTimeValue.map((value, index) =>{
+    console.log(storageCount)
+    const storageCountValue = Object.values(storageCount);
+    const storageCountKeys = Object.keys(storageCount);
+    return storageCountValue.map((value, index) =>{
         if(value % 2 === 1){
-            return storageCountTimeKeys[index]
+            return storageCountKeys[index]
         }
     }).join("")
   }
-
-console.log(findOdd([1,0,1]))
+  module.exports = findOdd;
+console.log(findOdd([1,0,1])) // 0
