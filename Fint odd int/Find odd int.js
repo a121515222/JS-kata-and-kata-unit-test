@@ -22,11 +22,11 @@ function findOdd(InputArray) {
     console.log(storageCount)
     const storageCountValue = Object.values(storageCount);
     const storageCountKeys = Object.keys(storageCount);
-    return storageCountValue.map((value, index) =>{
+    return parseInt(storageCountValue.map((value, index) =>{
         if(value % 2 === 1){
             return storageCountKeys[index]
         }
-    }).join("")
+    }).join(""))
   }
   module.exports = findOdd;
 console.log(findOdd([1,0,1])) // 0
