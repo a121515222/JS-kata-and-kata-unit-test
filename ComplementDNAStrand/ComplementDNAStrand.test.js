@@ -22,33 +22,3 @@ describe('complementDNAStrand', () => {
       expect(()=>complementDNAStrand(incorrectNucleicAc)).toThrow(expectedErrorMessage);
     });
   });
-
-
-
-
-
-
-//   describe('complementDNAStrand', () => {
-//     test.each([
-//       ['AGCTAGCTAGCT', 'TCGATCGATCGA'],
-//       ['AGCTAGCTAGCTAGCTAGCT', 'TCGATCGATCGATCGATCGA']
-//     ])('Returns the complement of the input DNA strand: %s', (inputDNA, expectedOutput) => {
-//       expect(complementDNAStrand(inputDNA)).toBe(expectedOutput);
-//     });
-    
-//     test('Throws an error when given an empty input', () => {
-//       const inputDNA = 'X';
-//       const expectedErrorMessage = "Input Nucleic acid sequence error";
-//       expect(() => complementDNAStrand(inputDNA)).toThrow(expectedErrorMessage);
-//     });
-//     test('Throws an error when given an empty input', () => {
-//         const inputDNA = ' ';
-//         const expectedErrorMessage = "Input Nucleic acid sequence error";
-//         expect(() => complementDNAStrand(inputDNA)).toThrow(expectedErrorMessage);
-//       });
-//     test('Throws an error when given an invalid input', () => {
-//       const inputDNA = 'AGCTAGCTAGCX';
-//       const expectedErrorMessage = "Input Nucleic acid sequence error";
-//       expect(() => complementDNAStrand(inputDNA)).toThrow(expectedErrorMessage);
-//     });
-//   });
