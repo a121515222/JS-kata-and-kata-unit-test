@@ -10,15 +10,6 @@
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 function arrayDiff(a, b) {
-  if(a.length === 0 || b.length === 0) {
-    return a;
-   } else {
-     const diffArray = a.filter(aNumber=>{
-       if(b.indexOf(aNumber) <0) {
-         return aNumber
-       }
-     })
-     return diffArray
-   }
+  return a.filter(num => b.indexOf(num) === -1)
 }
 module.exports = arrayDiff;
