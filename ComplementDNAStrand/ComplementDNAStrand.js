@@ -19,10 +19,6 @@ function complementDNAStrand(dna){
             return "C";
           case "C" :
             return "G";
-          case " ":
-            throw "Input Nucleic acid sequence error";
-          // case /^ATCG/:
-          //   throw "Input Nucleic acid sequence error";  
           default :
             throw "Input Nucleic acid sequence error";  
       }

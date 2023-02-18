@@ -19,7 +19,6 @@ function findOdd(InputArray) {
     InputArray.forEach(num=>{
           storageCount[num] ++;
     })
-    console.log(storageCount)
     const storageCountValue = Object.values(storageCount);
     const storageCountKeys = Object.keys(storageCount);
     return parseInt(storageCountValue.map((value, index) =>{
@@ -29,4 +28,3 @@ function findOdd(InputArray) {
     }).join(""))
   }
   module.exports = findOdd;
-console.log(findOdd([1,0,1])) // 0

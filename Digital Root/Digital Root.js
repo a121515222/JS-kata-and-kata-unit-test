@@ -18,5 +18,4 @@ function digitalRoot(n) {
         return n
     }
   }
-  digitalRoot(456)//6
   module.exports = digitalRoot;

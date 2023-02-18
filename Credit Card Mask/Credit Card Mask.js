@@ -21,16 +21,10 @@
 // -->
 // "####################################man!"
 
-function mask(info) {
+function maskify(info) {
     return info.split('').map((item,index) => {
-        if( index < (info.length - 4)) {
-            console.log(item)
-            return "#"
-        } else{
-            return item
-        }
+        return index < (info.length - 4) ? '#' : item
     }).join("")
 }
-module.exports = mask;
-let result;
-console.log(result = mask("1234567")) 
+module.exports = maskify;
+

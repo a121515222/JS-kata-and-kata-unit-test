@@ -6,7 +6,7 @@ describe('digitalRoot', () => {
         [10001,2],
         [0,0],
         [999,9],
-    ])("Nucleic acid sequence should be marked complement", (inputNumber, expected)=>{
+    ])("number should sum for each digit until one digit", (inputNumber, expected)=>{
         expect(digitalRoot(inputNumber)).toBe(expected);
     });
     

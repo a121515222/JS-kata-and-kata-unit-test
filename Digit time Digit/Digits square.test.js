@@ -9,6 +9,6 @@ test.each([
     [1010, "(1-0-1-0)"],
     [8249, "(64-4-16-81)"],
     [1, "(1)"],
-  ])('digit should be square', (number, expected) => {
+  ])('digit should be squared', (number, expected) => {
     expect(squareDigits(number)).toBe(expected);
   });
