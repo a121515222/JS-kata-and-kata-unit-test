@@ -14,18 +14,8 @@ function squareDigits(num) {
     const digits =`${num}`;
     const digitsArray = digits.split("");
     const digitsLength = digitsArray.length;
-    return digitsArray.map((digit,index) => {
-      if(digitsLength === 1) 
-      {
-        return `(${digit * digit})`
-      } else if(index === (digitsLength)-1) {
-        return `-${digit * digit})`
-      } else if(index === 0) {
-        return `(${digit * digit}`
-      } 
-      else {
-        return`-${digit * digit}`
-      }
-      }).join("");
+    // 先不用管() 使用join("-")
+    digitsArray.map(digit => digit * digit)
+
   };
   module.exports = squareDigits;
