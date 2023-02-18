@@ -10,8 +10,14 @@
 // spinWords( "This is a test") => returns "This is a test" 
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 function spinWords(string){
-   return string.split(" ").map(word => {
-    return word.length >= 5 ? word.split("").reverse().join("") : word
+  // 可以依照邏輯斷行
+  // 裝eslint,prettier
+  return string
+    .split(" ")
+    .map(word => {
+      return word.length >= 5 
+      ? word.split("").reverse().join("") 
+      : word
     }).join(" ");
   }
   module.exports = spinWords;

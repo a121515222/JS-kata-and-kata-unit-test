@@ -1,8 +1,14 @@
 const complementDNAStrand = require('./complementDNAStrand');
 describe('complementDNAStrand', () => {
     test.each([
+        // 測試依照結果分類
         ["atgc", "TACG"],
+
+        ["atgcATCGAT", "ATCGAT"],
+
         ["ATGC", "TACG"],
+
+
         ["A","T"],
         ["T","A"],
         ["G","C"],
@@ -16,9 +22,9 @@ describe('complementDNAStrand', () => {
       expect(()=>complementDNAStrand(emptyNucleicAcids)).toThrow(expectedErrorMessage);
     });
   
-    test('Incorrect nucleic acid sequence should has error messager', () => {
-        const incorrectNucleicAc = "ATGCX";
+    test('Incorrect nucleic acid sequence should has error message', () => {
+        const incorrectNucleicAcids = "ATGCX";
         const expectedErrorMessage = "Input Nucleic acid sequence error";
-      expect(()=>complementDNAStrand(incorrectNucleicAc)).toThrow(expectedErrorMessage);
+      expect(()=>complementDNAStrand(incorrectNucleicAcids)).toThrow(expectedErrorMessage);
     });
   });
