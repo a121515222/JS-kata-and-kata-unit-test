@@ -6,10 +6,8 @@
 // createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
 
 function createPhoneNumber(numbers){
-    let formate = '(xxx) xxx-xxxx'
-    numbers.forEach(number=>{
-      formate = formate.replace('x',number)
-    })
-    return formate
+    return numbers.reduce((accumulator,currentValue)=>{
+      return accumulator.replace('x',currentValue)
+    },'(xxx) xxx-xxxx')
   }
   module.exports = createPhoneNumber;

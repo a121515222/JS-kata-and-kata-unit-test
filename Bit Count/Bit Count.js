@@ -6,8 +6,9 @@
 
 // Example: The binary representation of 1234 is 10011010010, 
 // so the function should return 5 in this case
-const countBits = function(number) {
-  return number.toString(2).split('0').join('').length
+const countBits = function(numbers) {
+  return numbers.toString(2).split('')
+    .reduce((accumulator, currentValue)=> accumulator +  currentValue * 1 ,0)
   }
 
   module.exports = countBits;
