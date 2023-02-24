@@ -12,3 +12,4 @@ function createPhoneNumber(numbers){
     })
     return formate
   }
+  module.exports = createPhoneNumber;

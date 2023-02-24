@@ -1,21 +1,33 @@
 const complementDNAStrand = require('./complementDNAStrand');
-describe('complementDNAStrand', () => {
+describe('input the DNA strand should out complement DNA strand', () => {
     test.each([
-        // 測試依照結果分類
-        ["atgc", "TACG"],
-
-        ["atgcATCGAT", "ATCGAT"],
-
-        ["ATGC", "TACG"],
-
-
         ["A","T"],
         ["T","A"],
         ["G","C"],
         ["C","G"]
-    ])("Nucleic acid sequence should be marked complement", (nucleobase, expected)=>{
+    ])("input single Nucleic acid should out the complement Nucleic acid", (nucleobase, expected)=>{
         expect(complementDNAStrand(nucleobase)).toBe(expected);
     });
+    
+    test.each([
+      ["AATTGGCC", "TTAACCGG"],
+      ["ATGC", "TACG"],
+  ])("Nucleic acid sequence should be marked complement", (nucleobase, expected)=>{
+      expect(complementDNAStrand(nucleobase)).toBe(expected);
+  });
+
+    test('input lower case nucleic acid sequence should out up case nucleic acid sequence', () => {
+      const nucleicAcids = "atgc";
+      const expected = "TACG";
+    expect(complementDNAStrand(nucleicAcids)).toBe(expected);
+  });
+
+    test('input lower and up case mix nucleic acid sequence should out up case nucleic acid sequence', () => {
+      const mixNucleicAcids = "atgcATCGAT";
+      const expected = "TACGTAGCTA";
+    expect(complementDNAStrand(mixNucleicAcids)).toBe(expected);
+  });
+
     test('Empty nucleic acid sequence should has error message', () => {
         const emptyNucleicAcids = " ";
         const expectedErrorMessage = "Input Nucleic acid sequence error";
